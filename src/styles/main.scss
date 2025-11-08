@@ -12,11 +12,6 @@ $week-name: (
   sun: 6,
 );
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -41,17 +36,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 500ms;
 
     &:hover {
       cursor: pointer;
       background-color: #ffbfcb;
-      transition-duration: 500ms;
       transform: translateY(-20px);
     }
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i})::before {
         content: '#{$i}';
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
       }
     }
   }
